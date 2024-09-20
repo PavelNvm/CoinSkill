@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Api", "CoinSkill\CoinSkill.Api.csproj", "{25DE959C-628B-4A28-8CC8-960A25ACF91D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.DataAccess", "CoinSkill.DataAccess\CoinSkill.DataAccess.csproj", "{1B7DDEBF-710A-4540-9304-38C707EC137F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Core", "CoinSkill.Core\CoinSkill.Core.csproj", "{3694197F-CEC4-42FC-9322-6443761C2446}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25DE959C-628B-4A28-8CC8-960A25ACF91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DE959C-628B-4A28-8CC8-960A25ACF91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DE959C-628B-4A28-8CC8-960A25ACF91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DE959C-628B-4A28-8CC8-960A25ACF91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7DDEBF-710A-4540-9304-38C707EC137F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7DDEBF-710A-4540-9304-38C707EC137F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7DDEBF-710A-4540-9304-38C707EC137F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7DDEBF-710A-4540-9304-38C707EC137F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3694197F-CEC4-42FC-9322-6443761C2446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3694197F-CEC4-42FC-9322-6443761C2446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3694197F-CEC4-42FC-9322-6443761C2446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3694197F-CEC4-42FC-9322-6443761C2446}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F542A71-DAAD-47C8-B0D7-F963203AC61B}
+	EndGlobalSection
+EndGlobal
