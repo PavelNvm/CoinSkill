@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Api", "CoinSkill\CoinSkill.Api.csproj", "{25DE959C-628B-4A28-8CC8-960A25ACF91D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.Api", "CoinSkill\CoinSkill.Api.csproj", "{25DE959C-628B-4A28-8CC8-960A25ACF91D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.DataAccess", "CoinSkill.DataAccess\CoinSkill.DataAccess.csproj", "{1B7DDEBF-710A-4540-9304-38C707EC137F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.DataAccess", "CoinSkill.DataAccess\CoinSkill.DataAccess.csproj", "{1B7DDEBF-710A-4540-9304-38C707EC137F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Core", "CoinSkill.Core\CoinSkill.Core.csproj", "{3694197F-CEC4-42FC-9322-6443761C2446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.Core", "CoinSkill.Core\CoinSkill.Core.csproj", "{3694197F-CEC4-42FC-9322-6443761C2446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Application", "CoinSkill.Application\CoinSkill.Application.csproj", "{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Infrastructure", "CoinSkill.Infrastructure\CoinSkill.Infrastructure.csproj", "{B718ED97-D091-4B5C-B471-636F5C4D4A5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{3694197F-CEC4-42FC-9322-6443761C2446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3694197F-CEC4-42FC-9322-6443761C2446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3694197F-CEC4-42FC-9322-6443761C2446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

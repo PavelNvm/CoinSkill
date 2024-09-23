@@ -1,4 +1,5 @@
-﻿using CoinSkill.Core.Models;
+﻿using CoinSkill.Core.Interfaces.Repositories;
+using CoinSkill.Core.Models;
 using CoinSkill.DataAccess.Entites;
 using Microsoft.EntityFrameworkCore;
 

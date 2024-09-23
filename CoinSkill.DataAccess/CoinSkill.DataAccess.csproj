@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CoinSkill.Application\CoinSkill.Application.csproj" />
     <ProjectReference Include="..\CoinSkill.Core\CoinSkill.Core.csproj" />
   </ItemGroup>
 

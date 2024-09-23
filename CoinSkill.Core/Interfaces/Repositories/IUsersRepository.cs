@@ -1,6 +1,6 @@
 ﻿using CoinSkill.Core.Models;
 
-namespace CoinSkill.DataAccess.Repositories
+namespace CoinSkill.Core.Interfaces.Repositories
 {
     public interface IUsersRepository
     {

@@ -21,7 +21,6 @@ namespace CoinSkill.Core.Models
             HighestStreak = highestStreak;
             Attempts = attempts;
             AverageStreak = averageStreak;
-            //DateOnly.FromDateTime(DateTime.Now)
         }
         public Guid Id { get; }
         public string UserName { get; }

@@ -1,4 +1,5 @@
-﻿using CoinSkill.Api.Contracts;
+﻿using CoinSkill.Api.Contracts.Requests;
+using CoinSkill.Application.Services;
 
 namespace CoinSkill.Api.Endpoints
 {
@@ -13,7 +14,7 @@ namespace CoinSkill.Api.Endpoints
 
             return app;
         }
-        private static async Task<IResult> Register(RegisterUserRequest user, UserService userService)
+        private static async Task<IResult> Register(RegisterUserRequest user, UsersService userService)
         {
 
 
@@ -21,7 +22,7 @@ namespace CoinSkill.Api.Endpoints
             return Results.Ok();
         }
 
-        private static async Task<IResult> Login(LoginUserRequest request, UserService userService)
+        private static async Task<IResult> Login(LoginUserRequest request, UsersService userService)
         {
             var token = await userService.Login(request.Email, request.Password);
             return Results.Ok(token);
