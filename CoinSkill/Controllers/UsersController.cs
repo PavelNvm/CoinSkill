@@ -1,5 +1,6 @@
 ﻿using CoinSkill.Api.Contracts.Responses;
 using CoinSkill.Core.Interfaces.Services;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoinSkill.Api.Controllers
@@ -23,6 +24,13 @@ namespace CoinSkill.Api.Controllers
             var response = users.Select(u=> new UsersResponse(u.Id,u.UserName));
             return Ok(response);
         }
+        //[HttpGet]
+        //public async Task<ActionResult<UsersResponse>> GetByEmail()
+        //{
+        //    var
+        //}
+
+
 
     }
 }

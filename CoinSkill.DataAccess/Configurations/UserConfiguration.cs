@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CoinSkill.DataAccess.Configurations
 {
-    internal class UserConfiguration : IEntityTypeConfiguration<UserEntity>
+    public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
     {
         public void Configure(EntityTypeBuilder<UserEntity> builder)
         {
@@ -21,7 +21,6 @@ namespace CoinSkill.DataAccess.Configurations
             builder.Property(b => b.HighestStreak).IsRequired();
             builder.Property(b => b.Attempts).IsRequired();
             builder.Property(b => b.AverageStreak).IsRequired();
-
         }
     }
 }

@@ -7,6 +7,7 @@ namespace CoinSkill.Core.Interfaces.Services
     {
         Task<string> Login(string email, string password);
         Task Register(string userName, string email, string password);
+        Task<string> GetUserNameById(Guid userId);
         Task<List<User>> GetAllUsers();
     }
 }

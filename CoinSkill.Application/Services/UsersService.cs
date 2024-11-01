@@ -23,7 +23,7 @@ namespace CoinSkill.Application.Services
         public async Task Register(string userName, string email, string password)
         {
             var hashedPassword = _passwordHasher.Generate(password);
-            var user = User.Create(Guid.NewGuid(), userName, email, hashedPassword, DateOnly.FromDateTime(DateTime.Now), 0, 0, 0);
+            var user = User.Create(Guid.NewGuid(), userName,  hashedPassword, email, DateOnly.FromDateTime(DateTime.Now), 0, 0, 0);
             await _usersRepository.Create(user);
 
         }
@@ -38,14 +38,17 @@ namespace CoinSkill.Application.Services
                 throw new Exception("Failed to login");
             }
             var token = _jwtProvider.GenerateToken(user);
-
-
-
             return token;
         }
+        
         public async Task<List<User>> GetAllUsers()
         {
             return await _usersRepository.GetUsers();
+        }
+
+        public async Task<string> GetUserNameById(Guid userId)
+        {
+            return await _usersRepository.GetById(userId).UserName;
         }
     }
 }

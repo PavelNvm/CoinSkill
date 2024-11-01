@@ -8,7 +8,9 @@ namespace CoinSkill.Core.Interfaces.Repositories
         Task<Guid> Create(User user);
         Task<Guid> DeleteUser(Guid id);
         Task<User> GetByEmail(string email);
+        Task<User> GetById(Guid id);
         Task<List<User>> GetUsers();
-        Task<Guid> Update(Guid id, int highestStreak, int attempts, int averageStreak);
+        Task<Guid> Update(Guid id, int highestStreak, int attempts, double averageStreak);
+        Task AddNewFlip(CoinFlip coinFlip);
     }
 }

@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.DataAccess", "Coi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.Core", "CoinSkill.Core\CoinSkill.Core.csproj", "{3694197F-CEC4-42FC-9322-6443761C2446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Application", "CoinSkill.Application\CoinSkill.Application.csproj", "{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.Application", "CoinSkill.Application\CoinSkill.Application.csproj", "{5C3CB8F6-3DCD-484C-ABC5-D8B9CA5282D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Infrastructure", "CoinSkill.Infrastructure\CoinSkill.Infrastructure.csproj", "{B718ED97-D091-4B5C-B471-636F5C4D4A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSkill.Infrastructure", "CoinSkill.Infrastructure\CoinSkill.Infrastructure.csproj", "{B718ED97-D091-4B5C-B471-636F5C4D4A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSkill.Tests", "CoinSkill.Tests\CoinSkill.Tests.csproj", "{3B9F3838-A25F-4268-B6C1-69001C95FDAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B718ED97-D091-4B5C-B471-636F5C4D4A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9F3838-A25F-4268-B6C1-69001C95FDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9F3838-A25F-4268-B6C1-69001C95FDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9F3838-A25F-4268-B6C1-69001C95FDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9F3838-A25F-4268-B6C1-69001C95FDAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

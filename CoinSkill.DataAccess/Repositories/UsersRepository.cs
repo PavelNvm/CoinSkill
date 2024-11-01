@@ -20,7 +20,6 @@ namespace CoinSkill.DataAccess.Repositories
             var userEntities = await _context.Users
                 .AsNoTracking()
                 .ToListAsync();
-
             var users = userEntities.Select(b => User.Create(b.Id, b.UserName, b.PasswordHash, b.Email, b.RegistrationDate, b.HighestStreak, b.Attempts, b.AverageStreak)).ToList();
             return users;
         }
@@ -28,11 +27,11 @@ namespace CoinSkill.DataAccess.Repositories
         {
             var userEntity = await _context.Users
                 .AsNoTracking()
-                .FirstAsync(u => u.Email == email);
-
+                .FirstOrDefaultAsync(u => u.Email == email);
             return User.Create(userEntity.Id, userEntity.UserName, userEntity.PasswordHash, userEntity.Email, userEntity.RegistrationDate, userEntity.HighestStreak, userEntity.Attempts, userEntity.AverageStreak);
 
         }
+        
         public async Task<Guid> Create(User user)
         {
             var userEntity = new UserEntity
@@ -52,7 +51,7 @@ namespace CoinSkill.DataAccess.Repositories
             return userEntity.Id;
         }
 
-        public async Task<Guid> Update(Guid id, int highestStreak, int attempts, int averageStreak)
+        public async Task<Guid> Update(Guid id, int highestStreak, int attempts, double averageStreak)
         {
             await _context.Users
                 .Where(u => u.Id == id)
@@ -80,6 +79,25 @@ namespace CoinSkill.DataAccess.Repositories
                 .Where(u => u.Id == id)
                 .ExecuteDeleteAsync();
             return id;
+        }
+        public async Task AddNewFlip(CoinFlip coinFlip)
+        {
+            var user = await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Id == coinFlip.UserId);
+            if (user.HighestStreak < coinFlip.Streak)
+                user.HighestStreak = coinFlip.Streak;
+            user.AverageStreak = (user.AverageStreak * user.Attempts + coinFlip.Streak) / ++user.Attempts;
+            await Update(user.Id, user.HighestStreak, user.Attempts, user.AverageStreak);            
+        }
+
+        public async Task<User> GetById(Guid id)
+        {
+            var user =  await _context.Users.
+                AsNoTracking().
+                FirstOrDefaultAsync(u=>u.Id==id);
+            //return User.Create()
+            return null;
         }
     }
 }

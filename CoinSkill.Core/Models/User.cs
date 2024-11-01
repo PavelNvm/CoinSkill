@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CoinSkill.DataAccess.Entites;
 
 namespace CoinSkill.Core.Models
 {
@@ -38,6 +34,10 @@ namespace CoinSkill.Core.Models
             //if(string.IsNullOrEmpty(userName))
 
             return new User(id, userName, passwordHash, email, registrationDate, highestStreak, attempts, averageStreak);
+        }
+        public static User Create(UserEntity userEntity)
+        {
+
         }
     }
 }
