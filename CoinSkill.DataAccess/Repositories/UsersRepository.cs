@@ -93,11 +93,11 @@ namespace CoinSkill.DataAccess.Repositories
 
         public async Task<User> GetById(Guid id)
         {
-            var user =  await _context.Users.
+            var userEntity =  await _context.Users.
                 AsNoTracking().
                 FirstOrDefaultAsync(u=>u.Id==id);
-            //return User.Create()
-            return null;
+            return User.Create(userEntity.Id, userEntity.UserName, userEntity.PasswordHash, userEntity.Email, userEntity.RegistrationDate, userEntity.HighestStreak, userEntity.Attempts, userEntity.AverageStreak);
+            
         }
     }
 }

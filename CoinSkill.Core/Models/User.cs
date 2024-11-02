@@ -1,6 +1,4 @@
-﻿using CoinSkill.DataAccess.Entites;
-
-namespace CoinSkill.Core.Models
+﻿namespace CoinSkill.Core.Models
 {
     public class User
     {
@@ -34,10 +32,6 @@ namespace CoinSkill.Core.Models
             //if(string.IsNullOrEmpty(userName))
 
             return new User(id, userName, passwordHash, email, registrationDate, highestStreak, attempts, averageStreak);
-        }
-        public static User Create(UserEntity userEntity)
-        {
-
         }
     }
 }

@@ -23,7 +23,7 @@ export default function RootLayout({
             <Flex align="start" justify="flex-start" style={{width:"1vw"}}>
             <Button style={{margin:"10px 5px 10px"}} type="text">Profile</Button>
               <Button style={{margin:"10px 5px 10px"}} type="text">Leaderboard</Button>  
-              <Button style={{margin:"10px 5px 10px"}} type="text">Chat</Button>
+              <Button style={{margin:"10px 5px 10px", visibility:"collapse"}} type="text">Chat</Button>
             </Flex>   
             <Flex  align="start" justify="flex-center" >
               <Button style={{margin:"10px", fontSize:"20px"}} type="default" danger>Flip a coin</Button>             

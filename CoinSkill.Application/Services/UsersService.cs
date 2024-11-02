@@ -46,9 +46,10 @@ namespace CoinSkill.Application.Services
             return await _usersRepository.GetUsers();
         }
 
-        public async Task<string> GetUserNameById(Guid userId)
+        public async Task<User> GetUserNameById(Guid userId)
         {
-            return await _usersRepository.GetById(userId).UserName;
+            var user = await _usersRepository.GetById(userId);
+            return user;
         }
     }
 }

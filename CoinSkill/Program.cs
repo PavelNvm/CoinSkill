@@ -54,10 +54,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("get", () =>
-{
-    return Results.Ok("ok");
-}).RequireAuthorization("AdminPolicy");
+
 
 
 app.Run();

@@ -2,6 +2,7 @@
 using CoinSkill.Api.Contracts.Responses;
 using CoinSkill.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Security.Claims;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -11,7 +12,7 @@ namespace CoinSkill.Api.Endpoints
     {
         public static IEndpointRouteBuilder MapCoinFlipEndpoints(this IEndpointRouteBuilder app)
         {
-            app.MapPost("flipMyltipleCoins", FlipMyltipleCoins)
+            app.MapPost("flipMultipleCoins", FlipMultipleCoins)
                 .RequireAuthorization();
             app.MapGet("getLeaderboard", GetLeaderboard).AllowAnonymous();
             
@@ -20,13 +21,13 @@ namespace CoinSkill.Api.Endpoints
             return app;
         }
 
-        private static async Task<IResult> FlipMyltipleCoins(             
+        private static async Task<IResult> FlipMultipleCoins(             
             ICoinFlipService coinFlipService,
             HttpContext context)
         {
             Guid userId;
             Guid.TryParse(context.User.FindFirst("userId")?.Value.ToString(), out userId);
-            var result = await coinFlipService.FlipMyltipleCoins(userId);
+            var result = await coinFlipService.FlipMultipleCoins(userId);
 
             return Results.Ok(new CoinFlipResponse(result.Item1.Streak,result.Item2));
         }
@@ -39,7 +40,7 @@ namespace CoinSkill.Api.Endpoints
         {
             var Leaderboard = await coinFlipService.GetLeaderboard(amount);
             int i = 0;
-            IEnumerable<CoinFLipLeaderboardResponse> result = Leaderboard.Select(c => new CoinFLipLeaderboardResponse(++i,c.Streak,c.UserId,"username",c.Date) ).ToList();
+            IEnumerable<CoinFLipLeaderboardResponse> result = Leaderboard.Select(c => new CoinFLipLeaderboardResponse(++i,c.Streak,c.UserId, usersService.GetUserNameById(c.UserId).Result.UserName, c.Date) ).ToList();
             return Results.Ok(result);
         }
 

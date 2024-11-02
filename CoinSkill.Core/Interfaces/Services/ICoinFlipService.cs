@@ -9,7 +9,7 @@ namespace CoinSkill.Core.Interfaces.Services
 {
     public interface ICoinFlipService
     {
-        Task<(CoinFlip, bool)> FlipMyltipleCoins(Guid userID);
+        Task<(CoinFlip, bool)> FlipMultipleCoins(Guid userID);
         Task<List<CoinFlip>> GetLeaderboard(int quantity);
     }
 }

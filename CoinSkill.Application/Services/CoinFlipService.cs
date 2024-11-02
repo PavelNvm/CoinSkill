@@ -22,7 +22,7 @@ namespace CoinSkill.Application.Services
         }
 
 
-        public async Task<(CoinFlip, bool)> FlipMyltipleCoins(Guid userID)
+        public async Task<(CoinFlip, bool)> FlipMultipleCoins(Guid userID)
         {
             int streak = 0;
             bool moreThan50 = true;

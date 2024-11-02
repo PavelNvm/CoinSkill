@@ -48,10 +48,10 @@ namespace CoinSkill.DataAccess.Repositories
             var leaderboardEntities = await _context.CoinFlips
                 .AsNoTracking()
                 .OrderByDescending(o => o.Streak)
-                .Take(quantity)
+                .Take(quantity)                
                 .ToListAsync();
             
-            var leaderboard = leaderboardEntities.Select(o=> CoinFlip.Create(o.Id,o.UserId,o.Date,o.Streak)).ToList();
+            var leaderboard = leaderboardEntities.Select(o=> CoinFlip.Create(o.Id,o.UserId,o.Date,o.Streak)).DistinctBy(o => o.UserId).ToList();
             return leaderboard;
         }
     }

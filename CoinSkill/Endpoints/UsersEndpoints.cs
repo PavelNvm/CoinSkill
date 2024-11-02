@@ -31,6 +31,17 @@ namespace CoinSkill.Api.Endpoints
             context.Response.Cookies.Append("cookies", token);
             return Results.Ok();
         }
+        private static async Task<IResult> GetUserViaCookies(
+            IUsersService userService,
+            HttpContext context
+            )
+        {
+            Guid userId;
+            Guid.TryParse(context.User.FindFirst("userId")?.Value.ToString(), out userId);
+            var user = userService.GetUserNameById(userId);
+
+            return Results.Ok();
+        }
     }
 
 }
